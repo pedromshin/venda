@@ -1,35 +1,35 @@
+import type { Metadata } from "next";
 
-import type {Metadata} from 'next';
-
-import { Separator } from '@acme/ui/separator';
-import { SidebarNav } from '~/app/dashboard/settings/_components/sidebar-nav';
+import { Separator } from "@acme/ui/separator";
+import { SidebarNav } from "~/app/dashboard/settings/_components/sidebar-nav";
 
 export const metadata: Metadata = {
-  title: 'Settings',
-  description: 'Settings for Anikode Studio. Customize your preferences and configure your site settings here.'
+  title: "Settings",
+  description:
+    "Settings for Anikode Studio. Customize your preferences and configure your site settings here.",
 };
 
 const sidebarNavItems = [
   {
-    title: 'Profile',
-    href: '/dashboard/settings/profile'
+    title: "Profile",
+    href: "/dashboard/settings/profile",
   },
   {
-    title: 'Account',
-    href: '/dashboard/settings/account'
+    title: "Account",
+    href: "/dashboard/settings/account",
   },
   {
-    title: 'Appearance',
-    href: '/dashboard/settings/appearance'
+    title: "Appearance",
+    href: "/dashboard/settings/appearance",
   },
   {
-    title: 'Notifications',
-    href: '/dashboard/settings/notifications'
+    title: "Notifications",
+    href: "/dashboard/settings/notifications",
   },
   {
-    title: 'Display',
-    href: '/dashboard/settings/display'
-  }
+    title: "Display",
+    href: "/dashboard/settings/display",
+  },
 ];
 
 interface SettingsLayoutProps {

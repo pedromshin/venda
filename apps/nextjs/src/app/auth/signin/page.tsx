@@ -1,4 +1,4 @@
-import type {Metadata} from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { NotebookTextIcon } from "lucide-react";
 
@@ -9,7 +9,7 @@ import { CardWrapper } from "~/app/auth/_components/card-wrapper";
 import { SignInForm } from "~/app/auth/_components/sign-in-form";
 
 import { createClient } from "~/utils/supabase/server";
-import { redirect } from 'next/navigation';
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Sign In",
@@ -20,7 +20,7 @@ export default async function SignInPage() {
   const supabase = createClient();
   const user = await supabase.auth.getUser();
 
-  if (!user.error ?? user.data.user) redirect('/dashboard')
+  if (!user.error ?? user.data.user) redirect("/dashboard");
 
   return (
     <>
